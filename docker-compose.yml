@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  web:
+    #build: .
+    image: mattrayner/lamp
+    ports:
+      - "82:80"
+    volumes:
+      -  /Users/lanzruiz/Desktop/Files/Project/carlatan:/var/www/html
+      -  /Users/lanzruiz/Desktop/Files/Project/carlatan/conf:/etc/apache2/sites-enabled
+
+    environment:
+        - ALLOW_OVERRIDE=true
